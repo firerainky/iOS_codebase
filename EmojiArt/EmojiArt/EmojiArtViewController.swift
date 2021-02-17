@@ -9,18 +9,17 @@ import UIKit
 
 class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
 
-    @IBOutlet var dropZone: UIView!
+    @IBOutlet var dropZone: UIView! {
+        didSet {
+            dropZone.addInteraction(UIDropInteraction(delegate: self))
+        }
+    }
 
     @IBOutlet var emojiArtView: EmojiArtView!
     
-    override func viewDidLoad() {
-        let dropInteraction = UIDropInteraction(delegate: self)
-        dropZone.addInteraction(dropInteraction)
-    }
-    
     func dropInteraction(_ interaction: UIDropInteraction,
                          canHandle session: UIDropSession) -> Bool {
-        return session.canLoadObjects(ofClass: NSURL.self) || session.canLoadObjects(ofClass: UIImage.self)
+        return session.canLoadObjects(ofClass: NSURL.self) && session.canLoadObjects(ofClass: UIImage.self)
     }
     
     func dropInteraction(_ interaction: UIDropInteraction,
@@ -37,18 +36,18 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
             }
         }
         
-        session.loadObjects(ofClass: UIImage.self) { images in
-            if let image = images.first as? UIImage {
-                self.imageFetcher.backup = image
-            }
-        }
-        
         session.loadObjects(ofClass: NSURL.self) { nsurls in
             if let url = nsurls.first as? URL {
                 self.imageFetcher.fetch(url)
 //                if let data = try? Data(contentsOf: url) {
 //                    self.emojiArtView.backgroundImage = UIImage(data: data)
 //                }
+            }
+        }
+        
+        session.loadObjects(ofClass: UIImage.self) { images in
+            if let image = images.first as? UIImage {
+                self.imageFetcher.backup = image
             }
         }
     }
