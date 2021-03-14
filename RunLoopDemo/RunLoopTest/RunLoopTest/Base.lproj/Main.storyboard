@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vZg-Ng-uDd">
+                                <rect key="frame" x="125" y="154" width="346" height="76"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nba-pl-QGS">
+                                <rect key="frame" x="187" y="262" width="226" height="30"/>
+                                <color key="backgroundColor" red="0.46232364469999998" green="0.84161931820000002" blue="0.69500325419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="使一视图先向下再向右移动"/>
+                                <connections>
+                                    <action selector="moveMyViewBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7F-e7-2KA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DefaultMode 的 timer：      s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZP-jc-y7V">
+                                <rect key="frame" x="175" y="96" width="251" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ps-tz-BSN">
+                                <rect key="frame" x="347" y="96" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CommonModes 的 timer：      s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9z-yV-UYd">
+                                <rect key="frame" x="175" y="125" width="251" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ8-82-X2T">
+                                <rect key="frame" x="370" y="125" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="RunLoop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOC-xp-fCS">
+                                <rect key="frame" x="194" y="36" width="213" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdv-lR-Ddq">
+                                <rect key="frame" x="156" y="314" width="284" height="30"/>
+                                <color key="backgroundColor" red="0.46232364469999998" green="0.84161931820000002" blue="0.69500325419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="给主线程的 RunLoop 添加一个 observer"/>
+                                <connections>
+                                    <action selector="addObserver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMA-H0-Tla"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGc-f6-lCg">
+                                <rect key="frame" x="156" y="370" width="284" height="30"/>
+                                <color key="backgroundColor" red="0.46232364469999998" green="0.84161931820000002" blue="0.69500325419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="在常驻子线程中执行execute方法"/>
+                                <connections>
+                                    <action selector="performSelectorInLongLivedThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAc-qX-ve2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-cr-tMU">
+                                <rect key="frame" x="156" y="425" width="284" height="30"/>
+                                <color key="backgroundColor" red="0.46232364469999998" green="0.84161931820000002" blue="0.69500325419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="异步添加 GCD 定时器，2s 后开始"/>
+                                <connections>
+                                    <action selector="addGCDTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="TrO-fE-8pq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik3-YT-eNb">
+                                <rect key="frame" x="156" y="477" width="284" height="30"/>
+                                <color key="backgroundColor" red="0.46232364469999998" green="0.84161931820000002" blue="0.69500325419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="取消 GCD 定时器"/>
+                                <connections>
+                                    <action selector="addGCDTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDh-JO-5Po"/>
+                                    <action selector="cancelGCDTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bb-bk-YdL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MGc-f6-lCg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0FM-Pd-dfN"/>
+                            <constraint firstItem="kJ8-82-X2T" firstAttribute="leading" secondItem="b9z-yV-UYd" secondAttribute="trailing" constant="-56" id="1ra-Pk-QEW"/>
+                            <constraint firstItem="b9z-yV-UYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="23F-ZE-Vuo"/>
+                            <constraint firstItem="5Ps-tz-BSN" firstAttribute="leading" secondItem="fZP-jc-y7V" secondAttribute="trailing" constant="-79" id="3Ry-MH-64x"/>
+                            <constraint firstItem="fZP-jc-y7V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cH-ZM-ImG"/>
+                            <constraint firstItem="vZg-Ng-uDd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6nA-Gt-jPd"/>
+                            <constraint firstItem="ik3-YT-eNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I1R-nv-IQW"/>
+                            <constraint firstItem="jdv-lR-Ddq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NkW-Tc-v5M"/>
+                            <constraint firstItem="oOC-xp-fCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pve-oC-2FA"/>
+                            <constraint firstItem="Nba-pl-QGS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tlm-9m-hR4"/>
+                            <constraint firstItem="b6e-cr-tMU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h4G-8e-645"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commonModesTimerCountLabel" destination="kJ8-82-X2T" id="gtu-mZ-Sbm"/>
+                        <outlet property="defaultModeTimerCountLabel" destination="5Ps-tz-BSN" id="gQq-Hn-9Mk"/>
+                        <outlet property="textFeild" destination="vZg-Ng-uDd" id="IeT-MX-4ZA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="278"/>
+        </scene>
+    </scenes>
+</document>
