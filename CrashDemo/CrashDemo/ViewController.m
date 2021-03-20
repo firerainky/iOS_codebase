@@ -30,6 +30,30 @@ NSString *kAttributeTitle = @"Attributed string operation successfully completed
     self.arr = @[@"aaa", @"bbb"];
     self.textView.delegate = self;
     NSLog(@"viewDidLoad: %@", [NSRunLoop currentRunLoop].currentMode);
+    
+    void (^blk)(void) = ^{//没有截获自动变量的Block
+            NSLog(@"Stack Block");
+        };
+        blk();
+        NSLog(@"%@",[blk class]);//打印:__NSGlobalBlock__
+        
+        int i = 1;
+        void (^captureBlk)(void) = ^{//截获自动变量i的Block
+            NSLog(@"Capture:%d", i);
+        };
+        captureBlk();
+        NSLog(@"%@",[captureBlk class]);//打印：__NSMallocBlock__
+    
+//    int count = 0;
+//        blk_t blk = ^(){
+//            NSLog(@"In Stack:%d", count);
+//        };
+//
+//        NSLog(@"blk's Class:%@", [blk class]);//打印：blk's Class:__NSMallocBlock__
+//        NSLog(@"Global Block:%@", [^{NSLog(@"Global Block");} class]);//打印：Global Block:__NSGlobalBlock__
+//        NSLog(@"Copy Block:%@", [[^{NSLog(@"Copy Block:%d",count);} copy] class]);//打印：Copy Block:__NSMallocBlock__
+//        NSLog(@"Stack Block:%@", [^{NSLog(@"Stack Block:%d",count);} class]);//打印：Stack Block:__NSStackBlock__
+    
     // Do any additional setup after loading the view.
 }
 
