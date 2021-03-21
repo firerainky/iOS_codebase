@@ -5,6 +5,9 @@
 # Not work yet
 ModuleDemo/
 WeChat.app/
+APP/
+Temp/
+wechat_headers/
 
 # mac hidden file
 .DS_Store
