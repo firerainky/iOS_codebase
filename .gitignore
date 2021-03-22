@@ -8,6 +8,7 @@ WeChat.app/
 APP/
 Temp/
 wechat_headers/
+dyld-635.2/
 
 # mac hidden file
 .DS_Store
